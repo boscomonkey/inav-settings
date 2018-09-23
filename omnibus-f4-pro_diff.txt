@@ -9,18 +9,35 @@ defaults noreboot
 # resources
 
 # mixer
+mmix 0  1.000  0.000  0.000  0.000
 
 # servo mix
+smix 0 3 0 100 0
+smix 1 4 0 100 0
+smix 2 3 14 100 0
+smix 3 4 14 -100 0
+smix 4 5 2 100 0
+smix 5 2 1 100 0
 
 # servo
+servo 2 1000 2000 1500 -100
+servo 3 1000 2000 1500 -100
+servo 4 1000 2000 1500 -100
 
 # feature
+feature SOFTSERIAL
+feature TELEMETRY
+feature CURRENT_METER
+feature AIRMODE
+feature PWM_OUTPUT_ENABLE
 
 # beeper
 
 # map
 
 # serial
+serial 0 64 115200 38400 0 115200
+serial 30 32 115200 38400 0 115200
 
 # led
 
@@ -29,22 +46,87 @@ defaults noreboot
 # mode_color
 
 # aux
+aux 0 0 4 1700 2100
+aux 1 2 0 1700 2100
+aux 2 10 0 900 1300
+aux 3 27 5 1700 2100
+aux 4 28 3 1300 2100
+aux 5 11 1 1300 1700
+aux 6 17 4 1700 2100
+aux 7 18 1 1700 2100
+aux 8 32 7 1300 1700
+aux 9 33 7 1700 2100
 
 # adjrange
 
 # rxrange
 
 # osd_layout
+osd_layout 0 7 12 11 V
+osd_layout 0 8 1 11 V
+osd_layout 0 30 1 12 V
+osd_layout 0 32 12 1 V
 
 # master
+set looptime = 2000
+set gyro_sync = ON
+set align_gyro = CW90
+set gyro_hardware_lpf = 188HZ
+set align_acc = CW90
 set acc_hardware = MPU6000
+set acczero_x = 78
+set acczero_y = -20
+set acczero_z = -127
+set accgain_x = 4073
+set accgain_y = 4101
+set accgain_z = 4025
 set mag_hardware = NONE
 set baro_hardware = BMP280
 set pitot_hardware = NONE
+set receiver_type = SERIAL
+set serialrx_provider = SBUS
+set min_throttle = 1132
+set max_throttle = 2000
+set align_board_yaw = 900
+set platform_type = AIRPLANE
+set model_preview_type = 14
+set osd_video_system = NTSC
+set name = Bosco G2
 
 # profile
 profile 1
 
+set mc_p_pitch = 20
+set mc_d_pitch = 15
+set mc_p_roll = 20
+set mc_d_roll = 15
+set mc_p_yaw = 45
+set mc_i_yaw = 5
+set mc_d_yaw = 15
+set mc_i_level = 5
+set fw_p_pitch = 20
+set fw_i_pitch = 30
+set fw_ff_pitch = 15
+set fw_p_roll = 20
+set fw_i_roll = 30
+set fw_ff_roll = 15
+set fw_p_yaw = 45
+set fw_i_yaw = 5
+set fw_ff_yaw = 15
+set nav_mc_pos_z_p = 40
+set nav_mc_pos_z_i = 5
+set nav_mc_pos_z_d = 10
+set nav_mc_vel_z_p = 0
+set nav_mc_vel_z_i = 0
+set nav_mc_vel_z_d = 0
+set nav_mc_pos_xy_p = 75
+set nav_mc_pos_xy_i = 5
+set nav_mc_pos_xy_d = 8
+set nav_mc_vel_xy_p = 0
+set nav_mc_vel_xy_i = 0
+set nav_mc_vel_xy_d = 0
+set pitch_rate = 15
+set yaw_rate = 9
 
 # profile
 profile 2
