@@ -71,7 +71,7 @@ osd_layout 0 32 12 1 V
 set looptime = 2000
 set gyro_sync = ON
 set align_gyro = CW90
-set gyro_hardware_lpf = 188HZ
+set gyro_hardware_lpf = 20HZ
 set align_acc = CW90
 set acc_hardware = MPU6000
 set acczero_x = 78
@@ -87,9 +87,15 @@ set receiver_type = SERIAL
 set serialrx_provider = SBUS
 set min_throttle = 1132
 set max_throttle = 2000
+set failsafe_procedure = RTH
 set align_board_yaw = 900
 set platform_type = AIRPLANE
 set model_preview_type = 14
+set small_angle = 180
+set inav_reset_home = FIRST_ARM
+set nav_rth_allow_landing = NEVER
+set nav_rth_altitude = 3000
+set nav_fw_bank_angle = 45
 set osd_video_system = NTSC
 set name = Bosco G2
 
@@ -113,6 +119,8 @@ set fw_ff_roll = 15
 set fw_p_yaw = 45
 set fw_i_yaw = 5
 set fw_ff_yaw = 15
+set max_angle_inclination_rll = 600
+set max_angle_inclination_pit = 600
 set nav_mc_pos_z_p = 40
 set nav_mc_pos_z_i = 5
 set nav_mc_pos_z_d = 10
@@ -125,7 +133,11 @@ set nav_mc_pos_xy_d = 8
 set nav_mc_vel_xy_p = 0
 set nav_mc_vel_xy_i = 0
 set nav_mc_vel_xy_d = 0
-set pitch_rate = 15
+set nav_fw_pos_z_p = 30
+set nav_fw_pos_z_i = 10
+set tpa_rate = 40
+set roll_rate = 36
+set pitch_rate = 18
 set yaw_rate = 9
 
 # profile
