@@ -1,0 +1,74 @@
+# diff all
+
+# version
+# INAV/OMNIBUSF4PRO 2.0.0 Aug 19 2018 / 21:27:27 (dbdd1656a)
+
+# reset configuration to default settings
+defaults noreboot
+
+# resources
+
+# mixer
+
+# servo mix
+
+# servo
+
+# feature
+
+# beeper
+
+# map
+
+# serial
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+
+# adjrange
+
+# rxrange
+
+# osd_layout
+
+# master
+set acc_hardware = MPU6000
+set mag_hardware = NONE
+set baro_hardware = BMP280
+set pitot_hardware = NONE
+
+# profile
+profile 1
+
+
+# profile
+profile 2
+
+
+# profile
+profile 3
+
+
+# battery_profile
+battery_profile 1
+
+
+# battery_profile
+battery_profile 2
+
+
+# battery_profile
+battery_profile 3
+
+
+# restore original profile selection
+profile 1
+battery_profile 1
+
+# save configuration
+save
