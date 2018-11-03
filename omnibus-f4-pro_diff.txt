@@ -20,16 +20,19 @@ smix 4 5 2 100 0
 smix 5 2 1 100 0
 
 # servo
-servo 2 1000 2000 1500 -100
-servo 3 1000 2000 1500 -100
-servo 4 1000 2000 1500 -100
+servo 2 1000 2000 1588 -100
+servo 3 1000 2000 1627 -100
+servo 4 1000 2000 1627 -100
+servo 5 1000 2000 1359 100
 
 # feature
+feature -TX_PROF_SEL
 feature SOFTSERIAL
 feature TELEMETRY
 feature CURRENT_METER
 feature AIRMODE
 feature PWM_OUTPUT_ENABLE
+feature FW_LAUNCH
 
 # beeper
 
@@ -46,16 +49,17 @@ serial 30 32 115200 38400 0 115200
 # mode_color
 
 # aux
-aux 0 0 4 1700 2100
-aux 1 2 0 1700 2100
+aux 0 0 3 1700 2100
+aux 1 1 0 1700 2100
 aux 2 10 0 900 1300
-aux 3 27 5 1700 2100
-aux 4 28 3 1300 2100
-aux 5 11 1 1300 1700
-aux 6 17 4 1700 2100
-aux 7 18 1 1700 2100
-aux 8 32 7 1300 1700
-aux 9 33 7 1700 2100
+aux 3 14 2 1300 1700
+aux 4 27 5 1700 2100
+aux 5 28 6 1700 2100
+aux 6 11 1 1300 1700
+aux 7 17 3 1300 2100
+aux 8 18 1 1700 2100
+aux 9 32 4 1300 1700
+aux 10 33 4 1700 2100
 
 # adjrange
 
@@ -70,9 +74,9 @@ osd_layout 0 32 12 1 V
 # master
 set looptime = 2000
 set gyro_sync = ON
-set align_gyro = CW90
+set align_gyro = CW270
 set gyro_hardware_lpf = 188HZ
-set align_acc = CW90
+set align_acc = CW270
 set acc_hardware = MPU6000
 set acczero_x = 78
 set acczero_y = -20
@@ -85,9 +89,12 @@ set baro_hardware = BMP280
 set pitot_hardware = NONE
 set receiver_type = SERIAL
 set serialrx_provider = SBUS
-set min_throttle = 1132
+set min_throttle = 1135
 set max_throttle = 2000
-set align_board_yaw = 900
+set failsafe_throttle = 1200
+set align_board_yaw = 2700
+set vbat_scale = 1103
+set current_meter_scale = 720
 set platform_type = AIRPLANE
 set model_preview_type = 14
 set osd_video_system = NTSC
