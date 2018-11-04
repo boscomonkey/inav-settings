@@ -95,6 +95,8 @@ set vbat_scale = 1103
 set current_meter_scale = 720
 set platform_type = AIRPLANE
 set model_preview_type = 14
+set deadband = 4
+set yaw_deadband = 4
 set osd_video_system = NTSC
 set name = Bosco G2
 
